@@ -19,7 +19,7 @@ public abstract class AbstractMapService<T, ID> {
     }
 
     Set<T> findAll() {
-        return (HashSet<T>)map.values();
+        return new HashSet<>(map.values());
     }
 
     void delete(T object) {
