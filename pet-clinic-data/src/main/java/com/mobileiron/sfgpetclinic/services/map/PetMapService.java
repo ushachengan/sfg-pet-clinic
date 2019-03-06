@@ -1,10 +1,11 @@
 package com.mobileiron.sfgpetclinic.services.map;
 
 import com.mobileiron.sfgpetclinic.model.Pet;
+import com.mobileiron.sfgpetclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetMapService extends AbstractMapService<Pet, Long> {
+public class PetMapService extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
     public Set<Pet> findAll() {
@@ -12,22 +13,27 @@ public class PetMapService extends AbstractMapService<Pet, Long> {
     }
 
     @Override
-    void delete(Pet object) {
+    public void delete(Pet object) {
         super.delete(object);
     }
 
     @Override
-    Pet save(Long id, Pet object) {
+    public Pet save(Long id, Pet object) {
         return super.save(id, object);
     }
 
     @Override
-    Pet findById(Long id) {
+    public Pet findById(Long id) {
         return super.findById(id);
     }
 
     @Override
-    void deleteById(Long id) {
+    public Pet save(Pet object) {
+        return null;
+    }
+
+    @Override
+    public void deleteById(Long id) {
         super.deleteById(id);
     }
 }
