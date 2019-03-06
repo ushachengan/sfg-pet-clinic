@@ -2,9 +2,11 @@ package com.mobileiron.sfgpetclinic.services.map;
 
 import com.mobileiron.sfgpetclinic.model.Vet;
 import com.mobileiron.sfgpetclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
