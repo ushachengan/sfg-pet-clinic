@@ -1,12 +1,12 @@
 package com.mobileiron.sfgpetclinic.services.map;
 
 import com.mobileiron.sfgpetclinic.model.Owner;
+import com.mobileiron.sfgpetclinic.services.OwnerService;
 
 import java.util.Set;
 
-//import com.mobileiron.sfgpetclinic.services.CrudService;
 
-public class OwnerMapService extends AbstractMapService<Owner, Long> {
+public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
 
     @Override
@@ -15,22 +15,27 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> {
     }
 
     @Override
-    void delete(Owner object) {
+    public void delete(Owner object) {
         super.delete(object);
     }
 
     @Override
-    Owner save(Long id, Owner object) {
+    public Owner save(Long id, Owner object) {
         return super.save(id, object);
     }
 
     @Override
-    Owner findById(Long id) {
+    public Owner findById(Long id) {
         return super.findById(id);
     }
 
     @Override
-    void deleteById(Long id) {
+    public Owner save(Owner object) {
+        return super.save(object.getId(), object);
+    }
+
+    @Override
+    public void deleteById(Long id) {
         super.deleteById(id);
     }
 
